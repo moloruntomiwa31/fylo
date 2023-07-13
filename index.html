@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black">
   <nav class="container flex justify-between mx-auto p-8 items-center">
@@ -17,15 +20,20 @@
       <a href="" class="text-white hover:text-blue-200">Team</a>
       <a href="" class="text-white hover:text-blue-200">Sign In</a>
     </div>
-    <button class="cursor-pointer md:hidden">
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="rgba(17, 102, 170, 0.7333333333333333)" d="M21 15.61L19.59 17l-5.01-5l5.01-5L21 8.39L17.44 12L21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg>
-    </button>
+    <button class="cursor-pointer md:hidden" id="menubtn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="white" d="M21 15.61L19.59 17l-5.01-5l5.01-5L21 8.39L17.44 12L21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg>    </button>
   </nav>
+
+  <div id="menu" class="flex flex-col bg-blue-300 shadow-xl items-end space-x-6 hidden container p-8 space-y-2 transition-all duration-900 ease-in-out">
+    <a href="" class="text-white hover:text-blue-900">Features</a>
+    <a href="" class="text-white hover:text-blue-900">Team</a>
+    <a href="" class="text-white hover:text-blue-900">Sign In</a>
+  </div>
 
   <section id="hero">
     <div class="flex flex-col-reverse container mx-auto p-8 mt-8">
       <div class="flex flex-col text-center text-white space-y-4 md:w-50">
-        <h2 class="text-2xl">All your files in one secure location, accessible anywhere</h2>
+        <h2 class="text-3xl font-bold">All your files in one secure location, accessible anywhere</h2>
         <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family and co-workers.</p>
         <div class="flex justify-center">
           <button class="bg-blue-950 p-4 shadow-md rounded-full hover:border-blue-600 hover:bg-transparent hover:border-2 cursor-pointer ">Get Started</button>
@@ -105,10 +113,10 @@
 
   <section id="testimonials">
     <div class="container mx-auto p-8 flex flex-col space-y-6 md:space-x-6 md:flex-row">
-      <div>
+      <div class="md:w-1/8">
         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 1200 1200"><path fill="white" d="M518.474 105.344C305.831 120.286.168 154.236 0 570.687v523.97h474.504v-560.61H316.946C306.965 384.354 430.23 345.701 564.274 316.03l-45.8-210.686zm635.724 0c-212.643 14.942-518.306 48.893-518.473 465.343v523.97h474.505v-560.61H952.672C942.689 384.354 1065.956 345.701 1200 316.03l-45.802-210.686z"/></svg>
       </div>
-      <div class="flex flex-col text-white bg-blue-950 w-50 rounded-2xl p-4 md:w-1/3">
+      <div class="flex flex-col text-white bg-blue-950 w-50 rounded-2xl p-4 md:w-1/4">
         <p class="text-white">Fylo has improved our team productivity by an order of magnitude. Since makng the switch our team has become a well oiled collaboration machine.</p>
         <div class="flex space-x-8 mt-4">
           <img src="images/profile-1.jpg" alt="" class="rounded-full w-12">
@@ -118,7 +126,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col text-white bg-blue-950 w-50 rounded-2xl p-4 md:w-1/3">
+      <div class="flex flex-col text-white bg-blue-950 w-50 rounded-2xl p-4 md:w-1/4">
         <p class="text-white">Fylo has improved our team productivity by an order of magnitude. Since makng the switch our team has become a well oiled collaboration machine.</p>
         <div class="flex space-x-8 mt-4">
           <img src="images/profile-2.jpg" alt="" class="rounded-full w-12">
@@ -128,7 +136,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col text-white bg-blue-950 w-50 rounded-2xl p-4 md:w-1/3">
+      <div class="flex flex-col text-white bg-blue-950 w-50 rounded-2xl p-4 md:w-1/4">
         <p class="text-white">Fylo has improved our team productivity by an order of magnitude. Since makng the switch our team has become a well oiled collaboration machine.</p>
         <div class="flex space-x-8 mt-4">
           <img src="images/profile-3.jpg" alt="" class="rounded-full w-12">
@@ -199,5 +207,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
